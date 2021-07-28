@@ -11,8 +11,8 @@
 ![4](https://user-images.githubusercontent.com/24936165/127352637-c7aedafe-4e63-4157-96d6-43e3b964dac5.gif)
 
 ## Technologies used in this project:
-# Angular 10
-# Ionic 5
-# MySQL
-# Cordova
-# PHP
+ • Angular 10
+ • Ionic 5
+ • MySQL
+ • Cordova
+ • PHP
