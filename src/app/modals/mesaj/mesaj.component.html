@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar class="border0">
+    <ion-title></ion-title>
+    <ion-icon name="close-circle" slot="end" size="large"  (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+<!-- Textarea in an item with a floating label -->
+<ion-item lines="none" class="descInput">
+  <ion-label position="floating">Description</ion-label>
+  <ion-textarea rows="6" maxlength="300"  [(ngModel)]="aciklama"></ion-textarea>
+</ion-item>
+&nbsp; &nbsp; <span>{{aciklama.length}}/300</span>
+
+
+
+<section>
+  <ion-button class="appButton" color="danger" expand="block" (click)="dismiss(aciklama)" [disabled]="!aciklama">Add</ion-button>
+  <ion-label style="text-align: center;"><img src="../assets/9 SCENE.svg" style="width: 500px;"></ion-label>
+</section>
+
+
+</ion-content>
+

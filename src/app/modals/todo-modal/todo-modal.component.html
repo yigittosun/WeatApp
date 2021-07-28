@@ -1,0 +1,50 @@
+<ion-header class="bar-header">
+  <ion-toolbar>
+    
+    <ion-title></ion-title>
+    <ion-icon name="close-circle" slot="end" size="large"  (click)="dismiss(baslik,b_tarih,b_saat,user_data)"></ion-icon>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <!--User login değil ise-->
+  <div class="bar-header">
+    
+    <ion-list>
+      
+ 
+      <ion-item class="itemBorder itemInput">
+    
+
+        <!-- Input with placeholder -->
+<ion-input placeholder="Write what you want!" [(ngModel)]="baslik" style="padding:5px;"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label><ion-icon name="calendar" size="large"></ion-icon></ion-label>
+        <ion-datetime value="2021-02-19" [(ngModel)]="b_tarih" min="1981" max="2025" placeholder="Due Date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="time" size="large"></ion-icon></ion-label>
+ <ion-datetime display-format="h:mm A" placeholder="End Time" [(ngModel)]="b_saat" picker-format="h:mm A" value="2021-02-19T07:43Z"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><ion-icon name="person"  size="large"></ion-icon></ion-label>
+        <ion-select placeholder="Work" [compareWith]="compareWith" [(ngModel)]="user_data"></ion-select>
+        <ion-select placeholder="Personel" [compareWith]="compareWith" [(ngModel)]="user_data">
+          <ion-select-option *ngFor="let user of personelList" [value]="user">{{user.ad_soyad}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+<section>
+  <ion-button class="appButton" color="danger" expand="block" (click)="todoAdd(baslik,b_tarih,b_saat,user_data ? user_data.no:0)" [disabled]="!baslik || !b_tarih || !b_saat">Add</ion-button>
+</section>
+<br>
+<ion-label style="text-align: center;"><img src="../assets/7 SCENE.svg" style="width: 500px;"></ion-label>
+</div>
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true" class="bar-header ">
+  <ion-toolbar>
+    <ion-title >PROFILE</ion-title>
+    <ion-icon lines="none" name="chevron-back-outline" slot="start" size="large"  (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+ <ion-content [fullscreen]="true">
+ 
+  <div align="center">
+  <img text-center class="circle"  src="assets/chef.png">
+  </div>
+  <h3 align="center" style="font-weight: bold; font-size: 20px;" > {{userData.ad_soyad}}</h3>
+ 
+<br>
+ <ion-list>
+  <ion-item>
+    <ion-icon slot="start" name="moon"></ion-icon>
+    <ion-label>Dark Mode</ion-label>
+    <ion-toggle slot="end" [ngModel]="darkMode" (ionChange)="cambio()"></ion-toggle>
+  </ion-item>
+</ion-list>
+<ion-item>
+  <ion-icon color="warning" slot="start" name="notifications"></ion-icon>
+    Notifications         
+</ion-item>
+<ion-item>
+  <ion-icon color="secondary" slot="start" name="settings"></ion-icon>
+    Setting and privacy         
+</ion-item>
+<br>
+<div align="center" style="font-weight: bold; font-size: 20px;" >User Information </div>
+<br>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>
+        <ion-text>Name-Surname</ion-text>
+        <p><ion-text color="dark">{{userData.ad_soyad}}</ion-text></p>
+      </ion-label>
+      <ion-icon name="person" color="dark" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-text>Email</ion-text>
+        <p><ion-text color="dark">{{userData.email}}</ion-text></p>
+      </ion-label>
+      <ion-icon name="mail" color="dark" slot="start"></ion-icon>
+    </ion-item>
+ </ion-list>
+ <div align="center">
+ <img src="../assets/logo.jpg" width="60px">
+</div>
+</ion-content>
+

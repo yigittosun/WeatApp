@@ -1,0 +1,147 @@
+<ion-header>
+  <ion-toolbar class="border0">
+    <ion-buttons slot="start" >
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" >
+      <ion-icon name="share-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+     <!-- fab placed to the top end -->
+     <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+      <ion-fab-button color="danger">
+ 
+      <ion-icon md="caret-up" ios="add-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="warning" (click)="mesajModal(id,user_id)">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="warning" (click)="isModal()">
+          <ion-icon name="briefcase"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+  <ion-item lines="none" class="top30">
+    <ion-label >
+      <h2 class="titleBlack">{{title}}</h2>
+    </ion-label>
+  </ion-item>
+  <ion-list>
+       
+    <ion-item class="griCizgi">
+      <ion-icon name="calendar-outline"> </ion-icon> <h5 class="tarih">{{tarih}}</h5>
+    </ion-item>
+    <ion-item style="padding-bottom: 20px;" class="griCizgi">
+      <ion-icon name="time-outline" style="font-size: 29px;"></ion-icon> <h5 class="tarih">{{saat}}</h5> </ion-item>
+  </ion-list>
+
+
+  <ion-list >
+
+    <!-- Multi-line sliding item with icon options on both sides -->
+    <ion-item-sliding id="item100" *ngFor="let todo of todoListSub" >
+     
+      <ion-item lines="none" class="test conteiner" *ngIf="todo.durum==0">
+        <ion-checkbox class="chec" color="dark" slot="start" (click)="updateStatus(todo.no,0,1)"></ion-checkbox>
+
+        <ion-label  class="detail done"  (click)="detailOpen(todo.no,user_id,todo.baslik,todo.b_tarih,todo.b_saat)">
+          <h2>{{todo.baslik}}</h2>
+         
+        </ion-label>
+       
+        <ion-badge color="secondary" slot="end" class="badgeCss" *ngIf="todo.adet>0">{{todo.adet}}</ion-badge>
+      </ion-item>
+
+      <ion-item-options side="start" >
+        <ion-item-option class="test_b0">
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end" >
+        
+        <ion-item-option class="test_b0" *ngIf="todo.user_id==user_id" (click)="delPress(todo.no,-1,2)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+
+        <ion-item-option *ngIf="todo.user_id==user_id" class="test_b0 right10">
+          <ion-icon slot="icon-only" name="create" (click)="mesajModal(id,user_id)"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </ion-list>
+
+
+  <!--Tamalanana işler-->
+
+  <ion-list > 
+<ion-item lines="none" *ngIf="todoListSub.length>0">
+  <ion-label >
+    
+    <h1 class="titleFont">Tamamlananlar</h1>
+  </ion-label>
+</ion-item>
+ 
+    <!-- Multi-line sliding item with icon options on both sides -->
+    <ion-item-sliding id="item100" *ngFor="let todo of todoListSub" >
+     
+      <ion-item lines="none" class="test conteiner" *ngIf="todo.durum==1">
+        <ion-checkbox checked="true" class="chec" color="dark" slot="start" (click)="updateStatus(todo.no,1,0)"></ion-checkbox>
+
+        <ion-label  class="detail done"  (click)="detailOpen(todo.no,user_id,todo.baslik,todo.b_tarih,todo.b_saat)">
+          <h2 class="titleFont2">{{todo.baslik}}</h2>
+         
+        </ion-label>
+       
+        <ion-badge color="secondary" slot="end" class="badgeCss opacity1" *ngIf="todo.tamamlanan_adet>0">{{todo.tamamlanan_adet}}</ion-badge>
+      </ion-item>
+
+      <ion-item-options side="start" >
+        <ion-item-option class="test_b0">
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end" >
+        
+        <ion-item-option class="test_b0" *ngIf="todo.user_id==user_id" (click)="delPress(todo.no,-1,2)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+
+        <ion-item-option *ngIf="todo.user_id==user_id" class="test_b0 right10">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item lines="none">
+      <ion-label style="text-align: center;"><img src="../assets/2 SCENE.svg" style="width: 500px;"></ion-label>
+    </ion-item>
+  </ion-list>
+
+
+<!--Mesajlar-->
+
+<ion-list>
+  <ion-item *ngFor="let mesaj of mesajlist">
+    <ion-avatar slot="start">
+      <img src="https://randomuser.me/api/portraits/women/31.jpg ">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{mesaj.ad_soyad}}</h2>
+      <h3>{{mesaj.tarih}}</h3>
+      <p>{{mesaj.mesaj}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

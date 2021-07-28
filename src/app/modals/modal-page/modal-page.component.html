@@ -1,0 +1,39 @@
+<ion-header  [translucent]="false">
+  <ion-toolbar >
+    <ion-buttons  slot="primary">
+      <ion-button color="danger" (click)="dismiss()">
+        <ion-icon name="close-sharp" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title ></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <!--Register Page-->
+  <div id="container" class="paddingbutton100 center" >
+   <img src="../assets/3 SCENE.svg">
+
+   <ion-item>
+    <ion-label position="floating">Name-Surname</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+    <ion-item>
+     <ion-label position="floating">E-mail</ion-label>
+     <ion-input [(ngModel)]="email"></ion-input>
+   </ion-item>
+
+   <ion-item>
+     <ion-label position="floating">Password</ion-label>
+     <ion-input [(ngModel)]="password" type="password"></ion-input>
+   </ion-item>
+   
+   <div>
+   <ion-button color="danger" class="center" shape="round" (click)="userSave(name,email,password)">Sign In</ion-button>
+ </div>
+ <br>
+ <img src="../assets/logo.jpg" width="75px"> 
+   </div>
+</ion-content>

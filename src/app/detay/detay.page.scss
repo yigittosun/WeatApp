@@ -1,0 +1,52 @@
+.titleSub{
+    color: #9A9A9A;
+      font-size: 30px;
+      font-weight: 200;
+  }
+  
+  
+  .titleFont{
+    font-size: 22px;
+      font-weight: 500;
+  }
+
+  .titleBlack{
+    color: #222428;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .top30{
+    margin-top: 30px;
+  }
+
+
+.conteiner{
+    display: flex;
+    flex-direction: row;
+  
+   
+    position: relative;
+  }
+  .chec{
+    position: absolute;
+   
+    z-index: 100;
+  }
+  .detail{
+    position: relative;
+    left: 15%;
+  
+    
+  }
+
+  .tarih{
+    font-size: 16px;
+    font-weight: 200;
+    color: #4a4949;
+    padding-left: 13px;
+  }
+
+  .griCizgi{
+    --border-color:#f2f2f2;
+  }

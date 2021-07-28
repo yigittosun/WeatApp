@@ -1,0 +1,168 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.appButton{
+  
+    width: 75%;
+    margin-left: 13%;
+    height: 50px;
+    margin-top: 3%;
+    --border-radius:40px;
+  }
+  
+  .loginInput{
+    border: solid #c7c7c7;
+    border-width: 0.1px;
+    border-radius: 31px;
+    width: 75%;
+    margin-left: 13%;
+    height: 50px;
+    margin-top: 3%;
+  }
+  
+  .iconLarge{
+      font-size: 60px;
+  }
+
+  .top100{
+    padding-bottom: 100px;
+  }
+
+  .top475{
+    margin-top: 475px;
+  }
+
+  .opacity1{
+    opacity: 0.5;
+  }
+
+  .right10{
+    margin-right: 20px;
+  }
+
+
+.itemBorder{
+  --border-color:#fff;
+}
+.itemInput{
+  border: 1px solid #d7d8da;
+  margin: 12px;
+  border-radius: 13px;
+}
+
+.border0{
+  --border-color:#fff;
+}
+.itemMarginLeft15{
+  margin-left: 15px;
+}
+
+.titleSub{
+  color: #9A9A9A;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.test{
+  border: 1px solid #f7f7f7;
+  padding: 0px;
+  margin-left: 18px;
+  border-radius: 10px;
+  background: #F7F7F7;
+  --background: #F7F7F7;
+  margin-right: 18px;
+  margin-bottom: 10px;
+}
+
+
+.test_b0{
+  border: 1px solid #f7f7f7;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  --background:#000;
+
+
+
+}
+
+.badgeCss{
+  padding: 9px;
+  border-radius: 43px;
+  min-width: 31px;
+}
+
+.kart{
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 23px;
+  border-radius: 8px;
+  background: #ddd;
+  --background: #ddd;
+  box-shadow: 10px 10px 4px #a0a0a0;
+}
+
+.center{
+  text-align:center
+}
+
+.titleFont2{
+  font-size: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+
+.titleFont3{
+  font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.avatar{
+  padding: 5px;
+  margin-left: 14px;
+  margin-top: 4px;
+}
+
+.titleFont{
+  font-size: 22px;
+    font-weight: 500;
+}
+
+.labeldate{
+  text-align: center;
+}
+.bar-header {
+  border: 0px !important;
+  border-bottom-color: transparent !important;
+  background-image: none !important;
+  border-bottom: none !important;
+}
